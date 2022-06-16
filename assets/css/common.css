@@ -1,0 +1,213 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+##################################################
+   Reset
+##################################################
+*/
+*,*::before,*::after{box-sizing:border-box}
+a,abbr,acronym,address,applet,article,aside,audio,
+b,big,blockquote,body,canvas,caption,center,cite,code,
+dd,del,details,dfn,div,dl,dt,em,embed,fieldset,
+figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,
+header,hgroup,html,i,iframe,img,ins,kbd,label,
+legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,
+s,samp,section,small,span,strike,strong,sub,summary,sup,
+table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{
+margin:0;padding:0;border:0;font-size:100%;
+font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,
+q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+img{max-width:100%;vertical-align: top;}
+
+/*
+##################################################
+   Container
+##################################################
+*/
+#container {
+background: #E6E6E6;
+background-image: url("img/content_back.png");
+}
+
+/*
+##################################################
+   Menu Bar
+##################################################
+*/
+#menuBar {
+position: sticky;
+top: 0;
+z-index: 9999;
+height: 40px;
+padding: 0 8px 0 4px;
+background-color: #333;
+box-shadow: 0 0 16px rgba(0,0,0,.6);
+}
+.menuBar-Container {
+display: flex;
+width: 100%; max-width: 1920px;
+margin: 0 auto;
+}
+.menuBar-Container > div {
+flex: 0 0 auto;
+}
+/*
+# menuBar-ExastroMenu
+*/
+.menuBar-ExastroMenu {
+position: relative;
+width: 40px; height: 40px;
+}
+.menuBar-ExastroMenu-Open {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px; height: 40px;
+background-color: #222;
+line-height: 40px;
+text-align: center;
+color: #CCC;
+font-size: 20px;
+cursor: pointer;
+transition-duration: 0.3s;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+.menuBar-ExastroMenu-Open > i {
+display: block;
+}
+.suiteMenuOpen:hover {
+color: #FFF;
+}
+.suiteMenu {
+display: none;
+position: fixed;
+top: 48px;
+left: 8px;
+width: 304px;
+background-color: #E5EAEF;
+border-radius: 4px;
+box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.suiteMenu.open {
+display: block;
+}
+.suiteMenuHome,
+.suiteMenuItem {
+background-color: #FFF;
+border-bottom: 1px solid #CCC;
+}
+.suiteMenuItem:last-child {
+border: none;
+}
+.suiteMenuList {
+margin-left: 24px;
+border-left: 1px solid #CCC;
+}
+.suiteMenuLink {
+display: block;
+padding: 20px;
+text-decoration: none;
+letter-spacing: .75px;
+font-size: 20px;
+color: #333;
+}
+.suiteMenuLink:hover   {
+background-color: #F5F7F9;
+}
+.suiteMenuLink::after {
+content: '\f138';
+position: absolute;
+display: inline-block;
+right: 16px;
+font-family: 'Font Awesome 6 Free';
+font-weight: bold;
+font-size: 14px;
+color: #002B62;
+transition-duration: 0.3s;
+}
+.suiteMenuLink:hover::after {
+right: 12px;
+}
+
+.suiteMenuLink > span {
+display: inline-block;
+vertical-align: bottom;
+font-size: 10px;
+}
+
+
+.menuBarLogo {
+overflow: hidden;
+width: 160px; height: 40px;
+padding: 4px 0;
+text-align: center;
+}
+.logoLink {
+display: inline-block;
+}
+.logoImg {
+max-height: 32px;
+}
+
+.menuBarSubMenu {
+margin-left: auto;
+}
+.mainMenuList,
+.subMenuList {
+display: flex;
+border-right: 1px solid #404040;
+border-left: 1px solid #262626;
+}
+.mainMenuItem,
+.subMenuItem {
+letter-spacing: normal;
+display: inline-block;
+border-right: 1px solid #262626;
+border-left: 1px solid #404040;
+}
+.mainMenuLink,
+.subMenuLink {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 40px;
+padding: 0 16px;
+text-decoration: none;
+letter-spacing: .75px;
+white-space: nowrap;
+font-family: 'Roboto', sans-serif;
+font-weight: 900;
+font-size: 14px;
+color: #EEE;
+}
+.subMenuLink {
+position: relative;
+width: 40px; height: 40px;
+padding: 0 8px;
+}
+.mainMenuLink > i {
+margin-right: 8px;
+font-size: 16px;
+color: #AAA;
+}
+.subMenuLink > i {
+font-size: 24px;
+}
+.mainMenuLink:hover,
+.subMenuLink:hover {
+background-color: rgba(0,0,0,.2);
+}
+.subMenuLink > span {
+display: none;
+}

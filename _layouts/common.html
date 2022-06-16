@@ -1,42 +1,171 @@
+---
+---
 <!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <meta name="theme-color" content="#002B62">
 
-    <title>Exastro</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="theme-color" content="#002B62">
 
-    <!-- Font Awesome 6.1.1 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- jQuery 3.6.0 -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"></script>
-    <!-- Swiper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.js"
-      integrity="sha512-EWat0/wkEZtE7OENhG700T+jmrpHStGS7CqHUAzKW5MzNnVEa9Wfb+zJjF4hoXSgMTWlixL5Fgqhjx5PAliaXw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.css"
-      integrity="sha512-hhiS6muPW6W6KvaFQmuEL0KWnLpq01sQR/qns+GqBPVu9wBg7JG/touq/t0qhmzFTCbLAyFKtHyFnyentlqOOw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-      integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+<title>Exastro</title>
 
-    <!-- Exastro -->
-    <link rel="stylesheet" href="common.css">
-    <script src="common.js"></script>
+<!-- Font Awesome 6.1.1 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- jQuery 3.6.0 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<!-- Swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.js"
+  integrity="sha512-EWat0/wkEZtE7OENhG700T+jmrpHStGS7CqHUAzKW5MzNnVEa9Wfb+zJjF4hoXSgMTWlixL5Fgqhjx5PAliaXw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.css"
+  integrity="sha512-hhiS6muPW6W6KvaFQmuEL0KWnLpq01sQR/qns+GqBPVu9wBg7JG/touq/t0qhmzFTCbLAyFKtHyFnyentlqOOw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+  integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+<!-- Exastro assets -->
+<link rel="stylesheet" href="common.css">
+<script src="common.js"></script>
 
 </head>
 
 <body>
+<div id="container">
+<!--
+##################################################
+   Menu Bar
+##################################################
+-->
+<nav id="menuBar">
+    <div class="menuBar-Container">
+        <div class="menuBar-ExastroMenu">
+            <div class="menuBar-ExastroMenu-Open popup" data-popupMode="click" title="Exastro menu"><i class="fa-solid fa-list-ul"></i></div>
+            <div class="menuBar-ExastroMenu-Menu">
+                <div class="menuBar-ExastroMenu-Home"><a class="menuBar-ExastroMenu-Link" href="/">Exastro Home</a></div>
+                <ul class="menuBar-ExastroMenu-List">
+                    <li class="menuBar-ExastroMenu-Item"><a class="menuBar-ExastroMenu-Link" href="https://exastro-suite.github.io/it-automation-docs/index_ja.html">IT Automation</a></li>
+                    <li class="menuBar-ExastroMenu-Item"><a class="menuBar-ExastroMenu-Link" target="_blank" href="https://github.com/exastro-suite/playbook-collection-docs/blob/master/README.ja.md" rel="noopener">Playbook Collection</a></li>
+                    <li class="menuBar-ExastroMenu-Item"><a class="menuBar-ExastroMenu-Link" href="https://exastro-suite.github.io/oase-docs/index_ja.html">OASE(<span>Operation Autonomy<br>Support Engine</span>)</a></li>
+                    <li class="menuBar-ExastroMenu-Item"><a class="menuBar-ExastroMenu-Link" href="https://exastro-suite.github.io/epoch-docs/index_ja.html">EPOCH</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menuBar-Logo">
+            <a class="menuBar-Logo-Link" href="/"><img class="menuBar-Logo-Img" src="img/exastro.svg" alt="Exastro"></a>
+        </div>
+        <div clsss="menuBar-MainMenu">
+            <ul class="menuBar-MainMenu-List">
+                <li class="menuBar-MainMenu-Item"><a class="menuBar-MainMenu-Link" href="#"><i class="fas fa-list"></i><span>Message</span></a></li>
+                <li class="menuBar-MainMenu-Item"><a class="menuBar-MainMenu-Link" href="#"><i class="far fa-list-alt"></i><span>Case</span></a></li>
+                <li class="menuBar-MainMenu-Item"><a class="menuBar-MainMenu-Link" href="#"><i class="fas fa-clipboard-check"></i><span>FAQ</span></a></li>
+                <li class="menuBar-MainMenu-Item"><a class="menuBar-MainMenu-Link" href="#"><i class="fas fa-clipboard-check"></i><span>News Room</span></a></li>
+                <li class="menuBar-MainMenu-Item"><a class="menuBar-MainMenu-Link" href="#"><i class="fas fa-toolbox"></i><span>Asset</span></a></li>
+            </ul>
+        </div>
+        <div class="menuBar-SubMenu">
+            <ul class="menuBar-SubMenu-List">
+                <li class="menuBar-SubMenu-Item"><a href="https://twitter.com/ExastroSuite" class="menuBar-SubMenu-Link popup" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i><span>Twitter</span></a></li>
+                <li class="menuBar-SubMenu-Item"><a href="https://www.youtube.com/channel/UC-kwQiXQfmYXTPbrGR-8qxw" class="menuBar-SubMenu-Link popup" title="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i><span>YouTube</span></a></li>
+                <li class="menuBar-SubMenu-Item"><a href="https://github.com/exastro-suite" class="menuBar-SubMenu-Link popup" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github-square"></i><span>GitHub</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 {{ content }}
+
+<!--
+##################################################
+   Footer
+##################################################
+-->
+<footer id="footer">
+
+<div class="footerInfo">
+    <div class="footerLogo">
+        <img src="img/exastro.svg" alt="Exastro">
+    </div>
+    <div class="footerDesription">
+        <p class="footerDesriptionPar">
+            Exastro is an open source software suite for digitizing,<br>
+            utomating and labor saving the system life cycle.
+        </p>
+    </div>
+    <div class="footerSnsMenu">
+        <ul class="footerSnsMenuList">
+            <li class="footerSnsMenuItem">
+                <a class="footerSnsMenuLink" href="#"></a>
+                <a class="footerSnsMenuLink" href="#"></a>
+                <a class="footerSnsMenuLink" href="#"></a>
+                <a class="footerSnsMenuLink" href="#"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footerContentsMenu">
+    <ul class="footerContentsSuiteList">
+        <li class="footerContentsSuiteItem">
+            <div class="footerContentsSuiteTitle"><img class="footerContentsSuiteTitleImg" src="svg/lt_ita.svg"></div>
+            <ul class="footerContentsDetailList">
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/overview_ja.html" class="footerContentsDetailLink">Home</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/overview_ja.html" class="footerContentsDetailLink">Overview</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/install_ja.html" class="footerContentsDetailLink">Install</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/learn_ja.html" class="footerContentsDetailLink">Learn</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/webinar_ja.html" class="footerContentsDetailLink">Webinar</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/case_ja.html" class="footerContentsDetailLink">Case</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/documents_ja.html" class="footerContentsDetailLink">Documents</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/setting-samples_ja.html" class="footerContentsDetailLink">Setting samples</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/faq_ja.html" class="footerContentsDetailLink">FAQ</a></li>
+                <li class="footerContentsDetailItem"><a href="#" class="footerContentsDetailLink">Playbook Collection</a></li>
+            </ul>
+        </li>
+        <li class="footerContentsSuiteItem">
+            <div class="footerContentsSuiteTitle"><img class="footerContentsSuiteTitleImg" src="svg/lt_oase.svg"></div>
+            <ul class="footerContentsDetailList">
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/overview_ja.html" class="footerContentsDetailLink">Overview</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/install_ja.html" class="footerContentsDetailLink">Install</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/learn_ja.html" class="footerContentsDetailLink">Learn</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/webinar_ja.html" class="footerContentsDetailLink">Webinar</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/case_ja.html" class="footerContentsDetailLink">Case</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/documents_ja.html" class="footerContentsDetailLink">Documents</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/setting-samples_ja.html" class="footerContentsDetailLink">Setting samples</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/faq_ja.html" class="footerContentsDetailLink">FAQ</a></li>
+                <li class="footerContentsDetailItem"><a href="#" class="footerContentsDetailLink">Playbook Collection</a></li>
+            </ul>
+        </li>
+        <li class="footerContentsSuiteItem">
+            <div class="footerContentsSuiteTitle"><img class="footerContentsSuiteTitleImg" src="svg/lt_epoch.svg"></div>
+            <ul class="footerContentsDetailList">
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/overview_ja.html" class="footerContentsDetailLink">Overview</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/install_ja.html" class="footerContentsDetailLink">Install</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/learn_ja.html" class="footerContentsDetailLink">Learn</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/webinar_ja.html" class="footerContentsDetailLink">Webinar</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/case_ja.html" class="footerContentsDetailLink">Case</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/documents_ja.html" class="footerContentsDetailLink">Documents</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/setting-samples_ja.html" class="footerContentsDetailLink">Setting samples</a></li>
+                <li class="footerContentsDetailItem"><a href="/it-automation-docs/faq_ja.html" class="footerContentsDetailLink">FAQ</a></li>
+                <li class="footerContentsDetailItem"><a href="#" class="footerContentsDetailLink">Playbook Collection</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="copyrightBar"><small class="copyright">Copyright © NEC Corporation 2019-2022</small></div>
+
+</footer>
+
+</div>
 </body>
 </html>
