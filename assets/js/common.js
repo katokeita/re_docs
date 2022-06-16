@@ -43,10 +43,12 @@ $bar.find('.menuBar-ExastroMenu-Open').on( eMenuClick, function(){
         $menu.removeClass('open');
     } else {
         $menu.addClass('open');
-        $w.on( eMenuClick, function(){
-            $menu.removeClass('open');
-            $btn.click();
-            $w.off( eMenuClick );
+        $w.on( eMenuClick, function(e){
+            if ( !$( e.target ).closest('.menuBar-ExastroMenu') ) {
+                $menu.removeClass('open');
+                $btn.click();
+                $w.off( eMenuClick );
+            }
         });
     }
 });
