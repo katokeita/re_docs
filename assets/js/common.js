@@ -35,19 +35,19 @@ const ev = {
 ##################################################
 */
 const eMenuName = '.eMenu',
-      eMenuClick = ev.click + eMenuName;
+      eMenuClick = ev.click + eMenuName,
+      eMenuPointerDown = ev.down + eMenuName;
 $bar.find('.menuBar-ExastroMenu-Open').on( eMenuClick, function(){
     const $btn = $( this ),
           $menu = $btn.next();
     if ( $menu.is('.open') ) {
         $menu.removeClass('open');
+        $w.off( eMenuPointerDown );
     } else {
         $menu.addClass('open');
-        $w.on( eMenuClick, function(e){
-            if ( !$( e.target ).closest('.menuBar-ExastroMenu') ) {
-                $menu.removeClass('open');
-                $btn.click();
-                $w.off( eMenuClick );
+        $w.on( eMenuPointerDown, function(e){ 
+            if ( !$( e.target ).closest('.menuBar-ExastroMenu').length ) {
+                $btn.removeClass('popupHide').click();
             }
         });
     }
